@@ -14,6 +14,7 @@ function showTime(){
     
     var time = h + ":" + m + ":" + s + " ";
     document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").style.color = "white";
     document.getElementById("MyClockDisplay").textContent = time;
     document.getElementById("MyClockDisplay").className = "scale-in-ver-bottom";
     
