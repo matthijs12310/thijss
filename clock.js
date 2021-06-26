@@ -2,6 +2,19 @@ $('a').click(function(){
     $('ul').toggleClass('active');
   });
 
+var i = 0;
+var txt = 'Thijs.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter();
+
 function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
