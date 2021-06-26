@@ -7,7 +7,7 @@ body {
     font-family: monospace;
   }
 div {
-	width: 500px;
+	width: 100px;
 	height: 100px;
 	
 	position: absolute;
@@ -46,7 +46,7 @@ div {
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 150% }
+    to { width: 100% }
   }
   
   /* The typewriter cursor effect */
