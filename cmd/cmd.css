@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    font: 1.3rem Inconsolata, monospace;
+    font-size: 20px;
+    color: white;
+}
+#terminal{
+    visibility: hidden;
+}

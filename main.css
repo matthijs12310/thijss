@@ -21,7 +21,6 @@ div {
 .clock {
   font-size: 15px;
   font-family: monospace;
-  margin-bottom: 15px;
 }
 .Projects{
   font-size: 20px;
@@ -103,6 +102,13 @@ ul li a:hover{
     font-family: monospace;
     margin-top: 0px;
   }
+  .Welcome{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   /* Animation stuff me big dumb lol */  
 
