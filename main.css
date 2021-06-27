@@ -23,6 +23,16 @@ div {
   color: white;
   display: none;
 }
+.project1.animation{
+  animation-name: movetext;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+@keyframes movetext {
+  from {bottom:0%;}
+  to {bottom:90%;}
+}
 .clock {
   font-size: 15px;
   font-family: monospace;

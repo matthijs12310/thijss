@@ -9,6 +9,7 @@ $('a').click(function(){
     mylogo2.classList.toggle('fade');
     setTimeout("hidetext()", 500)
     $(".project1").fadeIn();
+    document.getElementById('project1').classList.toggle('animation');
   }
   function hidetext(){
     mylogo.style.visibility = "hidden";
