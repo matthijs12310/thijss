@@ -10,6 +10,10 @@ $('a').click(function(){
     setTimeout("hidetext()", 500)
     $(".project1").fadeIn();
     document.getElementById('project1').classList.toggle('animation');
+    setTimeout("change()", 2000);
+  }
+  function change(){
+    window.location.replace("project1/project1.html")
   }
   function hidetext(){
     mylogo.style.visibility = "hidden";
