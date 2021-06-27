@@ -2,6 +2,15 @@ $('a').click(function(){
     $('ul').toggleClass('active');
   });
 
+  let mylogo = document.getElementById('demo');
+  let mylogo2 = document.getElementById('projects');
+  document.getElementById('no').onclick = function(){
+    mylogo.classList.toggle('fade');
+    mylogo2.classList.toggle('fade');
+    mylogo.style.visibility = "hidden";
+    mylogo2.style.visibility = "hidden";
+  }
+
 var i = 0;
 var txt = 'Thijs.';
 var speed = 50;
@@ -14,28 +23,3 @@ function typeWriter() {
   }
 }
 typeWriter();
-
-function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    
-    if(h == 0){
-        h = 12;
-    }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s + " ";
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").style.color = "white";
-    document.getElementById("MyClockDisplay").textContent = time;
-    document.getElementById("MyClockDisplay").className = "scale-in-ver-bottom";
-    
-    setTimeout(showTime, 1000);
-    
-}
-showTime();
