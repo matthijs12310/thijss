@@ -7,3 +7,10 @@ body {
 #terminal{
     visibility: hidden;
 }
+#matthijs{
+    visibility: hidden;
+}
+.projects{
+    margin-top: 0px;
+    margin-left: 200px;
+}
