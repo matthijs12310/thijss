@@ -7,10 +7,13 @@ $('a').click(function(){
   document.getElementById('no').onclick = function(){
     mylogo.classList.toggle('fade');
     mylogo2.classList.toggle('fade');
+    setTimeout("hidetext()", 500)
+    $(".project1").fadeIn();
+  }
+  function hidetext(){
     mylogo.style.visibility = "hidden";
     mylogo2.style.visibility = "hidden";
   }
-
 var i = 0;
 var txt = 'Thijs.';
 var speed = 50;

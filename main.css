@@ -18,6 +18,11 @@ div {
 	right: 0;
   margin: auto;
 }
+.project1{
+  width: 150px;
+  color: white;
+  display: none;
+}
 .clock {
   font-size: 15px;
   font-family: monospace;
