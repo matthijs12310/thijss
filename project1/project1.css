@@ -3,7 +3,7 @@ body{
     font-family: monospace;
     color: white;
 }
-div{
+.project1{
     width: 150px;
 	height: 100px;
 	
@@ -16,11 +16,15 @@ div{
 }
 p{
 	text-align: center;
-	margin-right: 70px;
-	margin-top: 50px;
-	animation: fadeIn ease 2s;
+	margin-right: 50px;
+	margin-top: 100px;
+	animation: fadeIn ease 5s;
 }
-
+#back{
+	margin-left: 13px;
+	animation: fadeIn ease 2s;
+	color: white;
+}
  @keyframes fadeIn {
 	0% {
 	  opacity:0;
