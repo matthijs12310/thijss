@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-exec("su - && python --version && cp .s3cfg /root/.s3cfg", (error, stdout, stderr) => {
+exec("cd s3cmd-master/ && ./s3cmd ls s3://files.matthijs.tk", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
