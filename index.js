@@ -6,10 +6,9 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-exec("cd s3cmd-master/ && chmod +x ./s3cmd && pip install python-dateutil && ./s3cmd ls s3://files.matthijs.tk", (error, stdout, stderr) => {
+exec("cd s3cmd-master/ && chmod +x ./s3cmd && python -m ensurepip --upgrade && ./s3cmd ls s3://files.matthijs.tk", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
-        return;
     }
     if (stderr) {
         console.log(`stderr: ${stderr}`);
