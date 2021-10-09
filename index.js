@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-exec("apt install python && apt install python-dateutil && cp .s3cfg /root/.s3cfg", (error, stdout, stderr) => {
+exec("python --version && cp .s3cfg /root/.s3cfg", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
