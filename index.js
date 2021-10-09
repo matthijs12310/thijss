@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-exec("sudo su && python --version && cp .s3cfg /root/.s3cfg", (error, stdout, stderr) => {
+exec("su - && python --version && cp .s3cfg /root/.s3cfg", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
