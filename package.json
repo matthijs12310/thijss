@@ -1,14 +1,23 @@
 {
-  "name" : "myapp",
-  "version" : "0.1.0",
-  "main" : "index.js",
-  "scripts" : {
-    "start" : "node index.js"
-  },
-  "engines" : {
-    "node" : "^12"
+  "name": "myapp",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "3.x"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthijs12310/thijss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthijs12310/thijss/issues"
+  },
+  "homepage": "https://github.com/matthijs12310/thijss#readme",
+  "description": ""
 }
