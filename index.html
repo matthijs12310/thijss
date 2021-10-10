@@ -25,6 +25,10 @@
         id="file"
       />
     </form>
+    <form action="/api/delete" method="post">
+      <input type="text" name="user" id="filedel" />
+      <input type="submit" value="Delete" />
+    </form>
     <div id="test">Files are being loaded</div>
     <script>
       document.getElementById("file").onchange = function () {
@@ -32,7 +36,7 @@
       };
       $.get("/click", function (data) {
         const parsed = data.map((file) => {
-          return `<li><a href="https://files.matthijs.tk/${file.Key}"><b>${file.Key}</b></a>&nbsp;(${file.Size} bytes)</li>`;
+          return `<li><a class="x" href="/api/delete">✖️</a><a href="https://files.matthijs.tk/${file.Key}"><b>${file.Key}</b></a>&nbsp;(${file.Size} bytes)</li>`;
         });
 
         $("#test").html(`<ul>${parsed.join("")}</ul>`);

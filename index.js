@@ -5,11 +5,10 @@ const app = express();
 const port = process.env.PORT || 8080;
 const AWS = require('aws-sdk');
 const formidable = require('formidable');
-const mv = require('mv');
 const { IncomingForm } = require('formidable');
 const { json } = require('express');
 const { delimiter } = require('path');
-
+app.use(express.urlencoded());
 AWS.config.update({ accessKeyId: '17Y4ZE73T93MJ1YTVPB9', secretAccessKey: 'dPq3TiIx7uR4sg8Jo0uKKMNUNBH7Q1mpmzJcYNZl' });
 app.use(express.static(__dirname + '/'));
 
@@ -20,6 +19,10 @@ var params = {
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
+});
+app.post("/api/delete", function(req, res){
+    console.log(req.body.user);
+    
 });
 app.post('/api/upload', function(req, res) {
     const form = new formidable.IncomingForm();

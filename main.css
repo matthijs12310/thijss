@@ -1,6 +1,9 @@
 body {
   font-family: monospace;
   text-align: center;
+  background-color: #141415;
+  color: white;
+  font-size: 15px;
 }
 ul {
   padding: 0px;
@@ -14,4 +17,11 @@ input[type="file"] {
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
+  color: white;
+}
+a {
+  color: white;
+}
+.x {
+  text-decoration: none;
 }
