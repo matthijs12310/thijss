@@ -27,7 +27,8 @@
     </form>
     <form action="/api/delete" method="post">
       <input type="text" name="user" id="filedel" />
-      <input type="submit" value="Delete" />
+      <label for="del" class="custom-file-upload">Delete File</label>
+      <input type="submit" value="Delete" id="del" style="display: none" />
     </form>
     <div id="test">Files are being loaded</div>
     <script>
@@ -36,7 +37,7 @@
       };
       $.get("/click", function (data) {
         const parsed = data.map((file) => {
-          return `<li><a class="x" href="/api/delete">✖️</a><a href="https://files.matthijs.tk/${file.Key}"><b>${file.Key}</b></a>&nbsp;(${file.Size} bytes)</li>`;
+          return `<li><a href="https://files.matthijs.tk/${file.Key}"><b>${file.Key}</b></a>&nbsp;(${file.Size} bytes)</li>`;
         });
 
         $("#test").html(`<ul>${parsed.join("")}</ul>`);

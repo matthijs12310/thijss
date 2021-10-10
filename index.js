@@ -17,12 +17,20 @@ var params = {
     Bucket: "files.matthijs.tk",
 };
 
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 app.post("/api/delete", function(req, res){
-    console.log(req.body.user);
-    
+    console.log("Removed " + req.body.user);
+    var params3 = {
+        Bucket: "files.matthijs.tk",
+        Key: req.body.user
+    }
+    s3.deleteObject(params3, function(err){
+        if (err) console.log(err)
+    })
+    res.redirect("/")
 });
 app.post('/api/upload', function(req, res) {
     const form = new formidable.IncomingForm();
