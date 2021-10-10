@@ -34,10 +34,10 @@ app.post("/api/delete", function(req, res){
 });
 app.post('/api/upload', function(req, res) {
     const form = new formidable.IncomingForm();
- 
+    form.maxFileSize = 5000 * 1024 * 1024;
   form.parse(req, (err, fields, files) => {
     if (err) {
-      next(err);
+      console.log(err)
       return;
     }
     var oldpath = files.someExpressFiles.path
