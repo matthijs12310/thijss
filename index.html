@@ -1,26 +1,42 @@
 <html lang="en">
-
-<head>
+  <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <button id="btn1">Test command</button>
-    <div id="test">Hier komen de bestanden je weet...</div>
+  <body>
+    <form
+      action="/api/upload"
+      enctype="multipart/form-data"
+      method="post"
+      id="form"
+    >
+      <label for="file" class="custom-file-upload">
+        <i class="fa fa-cloud-upload"></i> Upload File
+      </label>
+      <input
+        type="file"
+        name="someExpressFiles"
+        multiple="multiple"
+        id="file"
+      />
+    </form>
+    <div id="test">Files are being loaded</div>
     <script>
-        $('#btn1').click(function () {
-            $.get('/click', function (data) {
-                $('#test').html(
-                    `<ul>${data.map(file => {
-                        return `<li><b>${file.Key}</b>&nbsp;(${file.Size} bytes)</li>`
-                    })}</ul>`);
-            });
+      document.getElementById("file").onchange = function () {
+        document.getElementById("form").submit();
+      };
+      $.get("/click", function (data) {
+        const parsed = data.map((file) => {
+          return `<li><a href="https://files.matthijs.tk/${file.Key}"><b>${file.Key}</b></a>&nbsp;(${file.Size} bytes)</li>`;
         });
-    </script>
-</body>
 
+        $("#test").html(`<ul>${parsed.join("")}</ul>`);
+      });
+    </script>
+  </body>
 </html>
